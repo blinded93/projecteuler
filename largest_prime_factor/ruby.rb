@@ -1,7 +1,7 @@
 require 'prime'
 
-def lpf(num)
-  # 600851475143
+def lpf1(num)
+  # without using #prime_division
   i = 2
 	largest = 0
 
@@ -20,4 +20,9 @@ def lpf(num)
   end
 
   largest
+end
+
+def lpf2(num)
+  # really fast
+  Prime.prime_division(num).last[0]
 end
